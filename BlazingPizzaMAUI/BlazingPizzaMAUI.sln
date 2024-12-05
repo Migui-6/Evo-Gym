@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingPizzaMAUI", "BlazingPizzaMAUI.csproj", "{9165B7AE-59CD-449C-8075-603B0EF2251B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A8FB36B1-2D1D-45CB-B0A8-4AB041855617} = {A8FB36B1-2D1D-45CB-B0A8-4AB041855617}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingPizzaMAUI.Domain", "..\BlazingPizzaMAUI.Domain\BlazingPizzaMAUI.Domain.csproj", "{A8FB36B1-2D1D-45CB-B0A8-4AB041855617}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9165B7AE-59CD-449C-8075-603B0EF2251B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9165B7AE-59CD-449C-8075-603B0EF2251B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9165B7AE-59CD-449C-8075-603B0EF2251B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9165B7AE-59CD-449C-8075-603B0EF2251B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9165B7AE-59CD-449C-8075-603B0EF2251B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9165B7AE-59CD-449C-8075-603B0EF2251B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A8FB36B1-2D1D-45CB-B0A8-4AB041855617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8FB36B1-2D1D-45CB-B0A8-4AB041855617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8FB36B1-2D1D-45CB-B0A8-4AB041855617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8FB36B1-2D1D-45CB-B0A8-4AB041855617}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5CF1843F-CF91-44C1-B460-BF9E2097E8C4}
+	EndGlobalSection
+EndGlobal

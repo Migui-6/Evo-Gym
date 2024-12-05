@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BlazingPizzaMAUI.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:BlazingPizzaMAUI.Domain.Models.Pizza">
+            <summary>
+            Represents a customized pizza as part of an order
+            </summary>
+        </member>
+        <member name="T:BlazingPizzaMAUI.Domain.Models.PizzaSpecial">
+            <summary>
+            Represents a pre-configured template for a pizza a user can order
+            </summary>
+        </member>
+    </members>
+</doc>

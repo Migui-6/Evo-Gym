@@ -1,0 +1,15 @@
+﻿@page "/FavoritePizzas/{preferredsize:int}"
+
+<h1>Choose a Pizza</h1>
+
+<p>Your favorite pizza is: @FavoriteSize inches.</p>
+
+@code {
+	[Parameter]
+	public string FavoriteSize { get; set; }
+
+	protected override void OnInitialized()
+	{
+		FavoriteSize ??= "Fiorentina";
+	}
+}

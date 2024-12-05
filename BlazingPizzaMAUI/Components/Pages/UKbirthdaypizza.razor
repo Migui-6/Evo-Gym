@@ -1,0 +1,12 @@
+﻿@page "/ukbirthdaypizza"
+
+<h1>Order a pizza for your birthday!</h1>
+
+<p>
+    Enter your birth date:
+    <input @bind="birthdate" @bind:format="dd-MM-yyyy" />
+</p>
+
+@code {
+    private DateTime birthdate { get; set; } = new(2000, 1, 1);
+}

@@ -1,0 +1,61 @@
+﻿@page "/register"
+@using EvoGym.Services
+@inject IAuthService AuthService
+@inject NavigationManager NavigationManager
+
+<div class="container">
+    <h2>Register</h2>
+    <EditForm Model="@registerModel" OnValidSubmit="HandleRegistration">
+        <DataAnnotationsValidator />
+
+        <div class="form-group">
+            <label>Email:</label>
+            <InputText class="form-control" @bind-Value="registerModel.Email" />
+            <ValidationMessage For="@(() => registerModel.Email)" />
+        </div>
+
+        <div class="form-group">
+            <label>Username:</label>
+            <InputText class="form-control" @bind-Value="registerModel.Username" />
+            <ValidationMessage For="@(() => registerModel.Username)" />
+        </div>
+
+        <div class="form-group">
+            <label>Password:</label>
+            <InputText type="password" class="form-control" @bind-Value="registerModel.Password" />
+            <ValidationMessage For="@(() => registerModel.Password)" />
+        </div>
+
+        <div class="form-group">
+            <label>Somatotype:</label>
+            <InputSelect class="form-control" @bind-Value="registerModel.Somatotype">
+                <option value="">Select Somatotype</option>
+                <option value="Ectomorph">Ectomorph</option>
+                <option value="Mesomorph">Mesomorph</option>
+                <option value="Endomorph">Endomorph</option>
+            </InputSelect>
+        </div>
+
+        <div class="form-group">
+            <label>Fitness Level:</label>
+            <InputSelect class="form-control" @bind-Value="registerModel.FitnessLevel">
+                <option value="1">Beginner</option>
+                <option value="2">Intermediate</option>
+                <option value="3">Advanced</option>
+            </InputSelect>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Register</button>
+    </EditForm>
+</div>
+
+@code {
+    private RegisterModel registerModel = new();
+
+    private async Task HandleRegistration()
+    {
+        var result = await AuthService.RegisterUser(registerModel);
+        if (result)
+            NavigationManager.NavigateTo("/");
+    }
+}

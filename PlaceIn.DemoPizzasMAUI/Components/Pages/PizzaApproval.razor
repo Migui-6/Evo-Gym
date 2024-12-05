@@ -1,0 +1,31 @@
+﻿@page "/pizzaapproval"
+@using System.Globalization
+
+<h1>Pizza:</h1>
+
+<p>Approval rating: @approvalRating</p>
+
+<p>
+    <label>
+        Set a new approval rating:
+        <input @bind="ApprovalRating" />
+    </label>
+</p>
+
+@code {
+    private decimal approvalRating = 1.0m;
+    private NumberStyles style = NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign;
+    private CultureInfo culture = CultureInfo.CreateSpecificCulture("en-US");
+
+    private string ApprovalRating
+    {
+        get => approvalRating.ToString("0.000", culture);
+        set
+        {
+            if (Decimal.TryParse(value, style, culture, out var number))
+            {
+                approvalRating = Math.Round(number, 3);
+            }
+        }
+    }
+}

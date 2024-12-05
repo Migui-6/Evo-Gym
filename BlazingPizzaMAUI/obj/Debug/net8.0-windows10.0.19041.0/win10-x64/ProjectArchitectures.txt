@@ -1,0 +1,2 @@
+C:\Users\Miguel\source\repos\BlazingPizzaMAUI.Domain\BlazingPizzaMAUI.Domain.csproj;neutral
+C:\Users\Miguel\source\repos\BlazingPizzaMAUI\BlazingPizzaMAUI.csproj;x64

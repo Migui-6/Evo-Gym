@@ -1,0 +1,37 @@
+﻿@page "/pizzas"
+@page "/pizzas/{pizzaname}"
+@using System.Web
+@inject NavigationManager NavManager
+
+<h1>Buy a Pizza</h1>
+
+<p>I want to order a: @PizzaName</p>
+
+<p>I want to add this topping: @ToppingName</p>
+<NavLink href=@HomePageURI Match="NavLinkMatch.All">Home Page</NavLink>
+
+<button class="btn" @onclick="NavigateToPaymentPage">
+	Buy this pizza!
+</button>
+
+@code {
+	[Parameter]
+	public string PizzaName { get; set; }
+
+	private string ToppingName { get; set; }
+
+	public string HomePageURI { get; set; }
+
+	protected override void OnInitialized()
+	{
+		HomePageURI = NavManager.BaseUri;
+		var uri = NavManager.ToAbsoluteUri(NavManager.Uri);
+		var result = HttpUtility.ParseQueryString(uri.Query);
+		ToppingName = result["extratopping"] ?? string.Empty;
+	}
+
+	private void NavigateToPaymentPage()
+	{
+		NavManager.NavigateTo("buypizza");
+	}
+}

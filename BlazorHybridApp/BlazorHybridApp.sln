@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorHybridApp", "BlazorHybridApp.csproj", "{C7411CED-8F3A-4880-BE49-AD03B4778E0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiServer", "..\ApiServer\ApiServer.csproj", "{AEF05144-161D-49E0-B989-EF3A77CCC001}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7411CED-8F3A-4880-BE49-AD03B4778E0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7411CED-8F3A-4880-BE49-AD03B4778E0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7411CED-8F3A-4880-BE49-AD03B4778E0C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C7411CED-8F3A-4880-BE49-AD03B4778E0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7411CED-8F3A-4880-BE49-AD03B4778E0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7411CED-8F3A-4880-BE49-AD03B4778E0C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AEF05144-161D-49E0-B989-EF3A77CCC001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEF05144-161D-49E0-B989-EF3A77CCC001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEF05144-161D-49E0-B989-EF3A77CCC001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEF05144-161D-49E0-B989-EF3A77CCC001}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB8362DA-782B-4986-9ABD-0BE5379FB489}
+	EndGlobalSection
+EndGlobal
